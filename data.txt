@@ -1,0 +1,45 @@
+data: 
+- gdp_and_labour_distribution.xlsx
+  type: table
+  description: contains a collection for data tables used for the assignment
+  - tables
+    Notes
+      contains downloaded notes from World Bank's classification of economies data
+    Series - Metadata
+      contains description of each indicator of the dataset downloaded from World Bank Databank
+    List of Economies - Raw Data
+      World Bank's classification of economies dataset
+    Labour Distribution - Raw Data
+      dataset downloaded from World Bank Databank. It contains population, labour, and gdp data for 162 for 15 years (2005 - 2019)
+    LoE
+      cleaned and formatted "List of Economies - Raw Data" table. Used in Tableau dashboard
+    LD
+      cleaned and formatted "Labour Distribution - Raw Data" table. Used in Tableau dashboard
+    MIC
+      contains data of 70 randomly selected countries distributed between lower middle-income and upper middle-income. Used in R analysis
+    Missing Values Replacement
+      contains computed descriptive analysis for indicators with unrecorded/missing values. The descriptive analysis was done with Excel
+
+- labour_distribution.twb
+  type: tableau file
+  description: contains worksheets, dashboards and story sheet used for the assignment
+
+- base.R
+  type: R script
+  description: contains reusable functions used for the R analysis. Also includes a one time definition for dataset (which imports the MIC table) which is reused across the other R files.
+
+- descriptive_statistical_analysis.R
+  type: R script
+  description: contains descriptive statistical analysis (mean, median, skewness, kurtosis) performed on middle-income countries using selected variables(employment_to_population_ratio, labour_participation_rate, unemployment, and annual_gdp_growth).
+
+- correlation_analysis.R
+  type: R script
+  description: contains correlation analysis performed selected variables in the MIC table
+
+- regression_analysis.R
+  type: R script
+  description: contains regression_analysis analysis performed on labour_participation_rate variable in the MIC tables
+
+- time_series_analysis.R
+  type: R script
+  description: contains time series analysis performed on labour_participation_rate variable in the MIC table. Also includes a forecast analysis for six years 
